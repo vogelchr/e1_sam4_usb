@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12455,7 +12455,7 @@ Source: http://onsemi.com .. MBR0520LT1-D.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="con-lstb" urn="urn:adsk.eagle:library:162">
+<library name="con-lstb@1">
 <description>&lt;b&gt;Pin Headers&lt;/b&gt;&lt;p&gt;
 Naming:&lt;p&gt;
 MA = male&lt;p&gt;
@@ -12463,7 +12463,7 @@ MA = male&lt;p&gt;
 W = angled&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="MA08-2" urn="urn:adsk.eagle:footprint:8269/1" library_version="1">
+<package name="MA08-2">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="-9.525" y1="2.54" x2="-8.255" y2="2.54" width="0.1524" layer="21"/>
 <wire x1="-8.255" y1="2.54" x2="-7.62" y2="1.905" width="0.1524" layer="21"/>
@@ -12553,16 +12553,8 @@ W = angled&lt;p&gt;
 <rectangle x1="8.636" y1="1.016" x2="9.144" y2="1.524" layer="51"/>
 </package>
 </packages>
-<packages3d>
-<package3d name="MA08-2" urn="urn:adsk.eagle:package:8335/1" type="box" library_version="1">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="MA08-2"/>
-</packageinstances>
-</package3d>
-</packages3d>
 <symbols>
-<symbol name="MA08-2" urn="urn:adsk.eagle:symbol:8268/1" library_version="1">
+<symbol name="MA08-2">
 <wire x1="3.81" y1="-10.16" x2="-3.81" y2="-10.16" width="0.4064" layer="94"/>
 <wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.6096" layer="94"/>
 <wire x1="1.27" y1="-5.08" x2="2.54" y2="-5.08" width="0.6096" layer="94"/>
@@ -12604,7 +12596,7 @@ W = angled&lt;p&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MA08-2" urn="urn:adsk.eagle:component:8373/1" prefix="SV" uservalue="yes" library_version="1">
+<deviceset name="MA08-2" prefix="SV" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA08-2" x="0" y="0"/>
@@ -12629,9 +12621,6 @@ W = angled&lt;p&gt;
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8335/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="" constant="no"/>
@@ -12724,11 +12713,11 @@ http://dangerousprototypes.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="con-molex" urn="urn:adsk.eagle:library:165">
+<library name="con-molex">
 <description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="0446200002" library_version="2">
+<package name="0446200002">
 <description>&lt;b&gt;RJ-45 INVERTED MODULAR JACK ASSEMBLY WITH RJ-11 KEEPOUT FEATURE&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.farnell.com/datasheets/73207.pdf"&gt; Data sheet &lt;/a&gt;&lt;p&gt;
 &lt;b&gt;MOLEX  0446200002  BUCHSE, RJ45, GESCHIRMT &lt;/b&gt;&lt;p&gt;
@@ -12760,7 +12749,7 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 </package>
 </packages>
 <symbols>
-<symbol name="JACK8SH" library_version="2">
+<symbol name="JACK8SH">
 <wire x1="1.524" y1="10.668" x2="0" y2="10.668" width="0.254" layer="94"/>
 <wire x1="0" y1="10.668" x2="0" y2="9.652" width="0.254" layer="94"/>
 <wire x1="0" y1="9.652" x2="1.524" y2="9.652" width="0.254" layer="94"/>
@@ -12859,7 +12848,7 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="0446200002" prefix="X" library_version="2">
+<deviceset name="0446200002" prefix="X">
 <description>&lt;b&gt;RJ-45 INVERTED MODULAR JACK ASSEMBLY WITH RJ-11 KEEPOUT FEATURE&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.farnell.com/datasheets/73207.pdf"&gt; Data sheet &lt;/a&gt;&lt;p&gt;
 &lt;b&gt;MOLEX  0446200002  BUCHSE, RJ45, GESCHIRMT &lt;/b&gt;&lt;p&gt;
@@ -12893,11 +12882,11 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 </deviceset>
 </devicesets>
 </library>
-<library name="jumper" urn="urn:adsk.eagle:library:252">
+<library name="jumper@1">
 <description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="JP1" urn="urn:adsk.eagle:footprint:15398/1" library_version="1">
+<package name="JP1">
 <description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
 <wire x1="-1.016" y1="0" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
 <wire x1="-1.016" y1="0" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
@@ -12921,16 +12910,8 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
 </package>
 </packages>
-<packages3d>
-<package3d name="JP1" urn="urn:adsk.eagle:package:15455/1" type="box" library_version="1">
-<description>JUMPER</description>
-<packageinstances>
-<packageinstance name="JP1"/>
-</packageinstances>
-</package3d>
-</packages3d>
 <symbols>
-<symbol name="JP2E" urn="urn:adsk.eagle:symbol:15391/1" library_version="1">
+<symbol name="JP2E">
 <wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
 <wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
 <wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
@@ -12946,7 +12927,7 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="JP1E" urn="urn:adsk.eagle:component:15487/1" prefix="JP" uservalue="yes" library_version="1">
+<deviceset name="JP1E" prefix="JP" uservalue="yes">
 <description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
 <gates>
 <gate name="A" symbol="JP2E" x="2.54" y="0"/>
@@ -12957,9 +12938,6 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <connect gate="A" pin="1" pad="1"/>
 <connect gate="A" pin="2" pad="2"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15455/1"/>
-</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -13133,7 +13111,7 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <part name="R14" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="TP7" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="SV4" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA08-2" device="" package3d_urn="urn:adsk.eagle:package:8335/1"/>
+<part name="SV4" library="con-lstb@1" deviceset="MA08-2" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="SV6" library="con-lstb" deviceset="MA05-2" device=""/>
@@ -13175,12 +13153,12 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <part name="R55" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="TP18" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="TP19" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="X4" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="0446200002" device=""/>
+<part name="X4" library="con-molex" deviceset="0446200002" device=""/>
 <part name="GND30" library="supply1" deviceset="GNDIO" device=""/>
 <part name="R56" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R57" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
-<part name="JP2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
+<part name="JP2" library="jumper@1" deviceset="JP1E" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15542,21 +15520,6 @@ vogelchr@vogel.cx
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
-</note>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports the association of 3D packages
-with devices in libraries, schematics, and board files. Those 3D
-packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
