@@ -15,4 +15,8 @@
 	- LEDs near frontpanel
 	- interface to old LIU only board (SPI + DATA on pinheader)
 	- pullups on i2c
+	- possibly switch to 82V2081 LUI, as a few people have successfully
+	  experimented with it, has access to nice stats over SPI
+	  https://www.idt.com/products/interface-connectivity/telecom-interface-products/t1j1e1-interface-products/82v2081-1-channel-t1-j1-e1-short-haullong-haul-liu
+
 
