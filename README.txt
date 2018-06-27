@@ -81,9 +81,7 @@ OPEN:
 
 	  => (vogelchr) Nice, didn't know this, but will probably not change.
 
-	 - diescrete resistors instead of U$2 resistor array is probably lower
-	cost in SMT, as it's a standard 10k resistor reel and not one more
-	"cut-tape" reel only for that part
+
 
 	   => (vogelchr) I think I'll add 10k quad resistor arrays for all
 	                 the random pullup/pulldowns, will cut down on
@@ -110,5 +108,10 @@ DONE after 20180625:
 	- R2, R8 9 Ohms (LIU Tx in series)
 	- LIU move signal from LOS to #INT 
 	  -> Interrupt can be generated on LOS anyway.
+	 - diescrete resistors instead of U$2 resistor array is probably lower
+	cost in SMT, as it's a standard 10k resistor reel and not one more
+	"cut-tape" reel only for that part
+		-> introduced quad resistor packs 10k for various pullups
+
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
