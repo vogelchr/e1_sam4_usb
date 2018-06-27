@@ -10,10 +10,14 @@ OPEN:
 	   http://cgit.osmocom.org/osmo-e1-xcvr/ repository.
 * Board
 	- LEDs near frontpanel
+	- R1 120 Ohms (LIU Rx term)
+	- R2, R8 9 Ohms (LIU Tx in series)
+	- USB_VBUS_SENS not routed to microcontroller!
+	- LIU move signal from LOS to #INT 
+	  -> Interrupt can be generated on LOS anyway.
+	- add pullup on LIU #RST
 
-
-DONE:
-
+DONE after 20180624:
 	- EAGLE 7 compatibility
 		(exported _v7 files)
 	- make JTAGSEL pullup DNP (JTAGSEL, TEST, ERASE should float)
