@@ -11,8 +11,6 @@ OPEN:
 * Board
 	- LEDs near frontpanel
 	- USB_VBUS_SENS not routed to microcontroller!
-	- LIU move signal from LOS to #INT 
-	  -> Interrupt can be generated on LOS anyway.
 	- add pullup on LIU #RST
 
 	(from LaF0rge:)
@@ -110,6 +108,7 @@ DONE after 20180625:
 	 (recommended: IP4234CZ6)
 	- R1 120 Ohms (LIU Rx term)
 	- R2, R8 9 Ohms (LIU Tx in series)
-
+	- LIU move signal from LOS to #INT 
+	  -> Interrupt can be generated on LOS anyway.
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)

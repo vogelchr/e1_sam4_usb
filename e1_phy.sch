@@ -14375,18 +14375,6 @@ vogelchr@vogel.cx
 <label x="254.254" y="56.134" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="LOS_LIU" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PA7_XIN32"/>
-<wire x1="142.24" y1="165.1" x2="165.1" y2="165.1" width="0.1524" layer="91"/>
-<label x="142.494" y="165.354" size="1.27" layer="95"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="LOS"/>
-<wire x1="254" y1="35.56" x2="266.7" y2="35.56" width="0.1524" layer="91"/>
-<label x="254.254" y="35.814" size="1.27" layer="95"/>
-</segment>
-</net>
 <net name="#RST_LIU" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PA8_XOUT32"/>
@@ -15611,6 +15599,18 @@ vogelchr@vogel.cx
 <wire x1="30.48" y1="243.84" x2="30.48" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="2A"/>
 <wire x1="30.48" y1="246.38" x2="33.02" y2="246.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="#LIU_INT" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="#INT/RXTXM0"/>
+<wire x1="218.44" y1="76.2" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
+<label x="218.186" y="76.454" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PA7_XIN32"/>
+<wire x1="142.24" y1="165.1" x2="165.1" y2="165.1" width="0.1524" layer="91"/>
+<label x="142.494" y="165.354" size="1.27" layer="95"/>
 </segment>
 </net>
 </nets>
