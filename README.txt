@@ -18,8 +18,6 @@ OPEN:
 	- add pullup on LIU #RST
 
 	(from LaF0rge:)
-	 - USB has no transient voltage suppressor, possible ESD damage
-	 (recommended: IP4234CZ6)
 
 	  => ok
 
@@ -111,6 +109,11 @@ DONE after 20180624:
 	- possibly switch to 82V2081 LUI, as a few people have successfully
 	  experimented with it, has access to nice stats over SPI
 	  https://www.idt.com/products/interface-connectivity/telecom-interface-products/t1j1e1-interface-products/82v2081-1-channel-t1-j1-e1-short-haullong-haul-liu
+
+DONE after 20180625:
+	 - USB has no transient voltage suppressor, possible ESD damage
+	 (recommended: IP4234CZ6)
+
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
