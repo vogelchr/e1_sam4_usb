@@ -13230,9 +13230,9 @@ Source: http://onsemi.com .. MBR0520LT1-D.pdf</description>
 <part name="U$2" library="laforge" deviceset="MNR" device="" value="MNR 8x10k"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="TR1" library="laforge" deviceset="PULSE_T1094NL" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="DNP"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="DNP"/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="DNP"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="120R"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="9R"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="9R"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0603" value="3k 1%"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>

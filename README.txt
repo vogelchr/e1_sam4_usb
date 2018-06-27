@@ -10,17 +10,12 @@ OPEN:
 	   http://cgit.osmocom.org/osmo-e1-xcvr/ repository.
 * Board
 	- LEDs near frontpanel
-	- R1 120 Ohms (LIU Rx term)
-	- R2, R8 9 Ohms (LIU Tx in series)
 	- USB_VBUS_SENS not routed to microcontroller!
 	- LIU move signal from LOS to #INT 
 	  -> Interrupt can be generated on LOS anyway.
 	- add pullup on LIU #RST
 
 	(from LaF0rge:)
-
-	  => ok
-
 	 - UART has not transient voltage suppressor, possible ESD damage
 	(recommended: IP4234CZ6)
 
@@ -113,7 +108,8 @@ DONE after 20180624:
 DONE after 20180625:
 	 - USB has no transient voltage suppressor, possible ESD damage
 	 (recommended: IP4234CZ6)
-
+	- R1 120 Ohms (LIU Rx term)
+	- R2, R8 9 Ohms (LIU Tx in series)
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
