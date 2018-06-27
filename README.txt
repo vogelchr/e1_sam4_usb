@@ -65,15 +65,6 @@ OPEN:
 
 	  => makes sense
 
-	 - for the DAC, it might make sense to align with what sylvain is using
-	in his FPGA based design (and what sysmocom has used in other designs):
-	MAX5215 (14bit). Could be upgraded to 16bit MAX5217 if ever needed.
-
-	  => ok (vogelchr)
-
-	 - might make sense to add a precision voltage reference for the DAC,
-	e.g. MAX6163ESA?
-
 	 - Cosmetic
 
 	 - If inverted-logic signals would use !SIGNAL instead of #SIGNAL, EAGLE
@@ -112,6 +103,15 @@ DONE after 20180625:
 	cost in SMT, as it's a standard 10k resistor reel and not one more
 	"cut-tape" reel only for that part
 		-> introduced quad resistor packs 10k for various pullups
+	 - for the DAC, it might make sense to align with what sylvain is using
+	in his FPGA based design (and what sysmocom has used in other designs):
+	MAX5215 (14bit). Could be upgraded to 16bit MAX5217 if ever needed.
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
+	 - might make sense to add a precision voltage reference for the DAC,
+	e.g. MAX6163ESA?
+		regulation seems to be good enough with the crappy DAC
+		in the SAM4S, so I think having the "good" +UB supply that
+		has constant load will be sufficient
+
