@@ -11,25 +11,14 @@ OPEN:
 * Board
 
 	- USB_VBUS_SENS not routed to microcontroller!
-	- add pullup on LIU #RST
-
-	 - UART has no pull-up resistor on RxD input, i.e. floating input unless
-	UART is connected
-	  => ok, but I think has internal pullup in SAM4S, at least can be turned on
-
 	 - GPS antenna input has no transient voltage suppressor, possible ESD
 	damage (unless the
 	GNS module has one inside? Did you find any documentation on that in
 	the module data sheet? Recommended: 0603ESDA-TR
 	  => will check
 
-	 - !RESET has no pull-up, design is possibly susceptible to picking up
-	RF/noise as reset trigger
-	  => has internal pullup, but will be easy to add
 
-	 - does SPI+I2C header (SV6) have UEXT compatible pin-out? If we use a
-	 2x5 header, it might make senese to use the olimex-standard UEXT format
-	 as there are plenty of other boards/devices with that pin-out
+
 
 DONE after 20180624:
 	- EAGLE 7 compatibility
@@ -65,6 +54,14 @@ DONE after 20180625:
 	serial cables. I think it makes sense to align with pin-out of industry
 	standard cables that people might already have
 	- LEDs near frontpanel
+	 - does SPI+I2C header (SV6) have UEXT compatible pin-out? If we use a
+	 2x5 header, it might make senese to use the olimex-standard UEXT format
+	 as there are plenty of other boards/devices with that pin-out
+	 - !RESET has no pull-up, design is possibly susceptible to picking up
+	RF/noise as reset trigger
+	 - UART has no pull-up resistor on RxD input, i.e. floating input unless
+	UART is connected
+	- add pullup on LIU #RST
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
