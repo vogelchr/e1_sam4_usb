@@ -12450,6 +12450,16 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <smd name="5" x="0" y="1.125" dx="0.6" dy="0.95" layer="1" roundness="50" rot="R180"/>
 <rectangle x1="-0.25" y1="0.825" x2="0.25" y2="1.5" layer="51"/>
 </package>
+<package name="0603">
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="E1_MAGNETICS">
@@ -12508,6 +12518,21 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <pin name="VCC" x="0" y="10.16" length="short" direction="pas" rot="R270"/>
 <pin name="GND" x="0" y="-10.16" length="short" direction="pas" rot="R90"/>
 </symbol>
+<symbol name="ESD_TVS_DIODE">
+<wire x1="0" y1="1.016" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.651" x2="-1.27" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="1.27" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.651" x2="-1.016" y2="1.651" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.016" x2="1.27" y2="0.381" width="0.254" layer="94"/>
+<wire x1="1.016" y1="0.381" x2="1.27" y2="0.381" width="0.254" layer="94"/>
+<pin name="A" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="K" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<wire x1="1.27" y1="-1.27" x2="0" y2="1.016" width="0.254" layer="94"/>
+<text x="2.54" y="0" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="PULSE_T1094NL" prefix="TR">
@@ -12556,6 +12581,23 @@ Source: &lt;a href=http://de.farnell.com/molex/0446200002/buchse-rj45-geschirmt/
 <technology name="">
 <attribute name="OC_DIGIKEY" value="568-5869-1-ND" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="0603ESDA-TR" prefix="D">
+<description>Bussmann 0603ESDA-TR ESD Suppressor</description>
+<gates>
+<gate name="G$1" symbol="ESD_TVS_DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0603">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="K" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -14032,10 +14074,7 @@ W = angled&lt;p&gt;
 <part name="CN1" library="adafruit" deviceset="USB" device="MINIB"/>
 <part name="R30" library="rcl" deviceset="R-EU_" device="R0603" value="33R"/>
 <part name="R31" library="rcl" deviceset="R-EU_" device="R0603" value="33R"/>
-<part name="R32" library="rcl" deviceset="R-EU_" device="R0603" value="27k"/>
-<part name="R33" library="rcl" deviceset="R-EU_" device="R0603" value="47k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="R34" library="rcl" deviceset="R-EU_" device="R0603" value="DNP"/>
 <part name="U2" library="cvogel" deviceset="GPS_GNS_2201" device=""/>
 <part name="X2" library="con-coax" deviceset="SMA-" device="142-0701-801/806"/>
@@ -14204,6 +14243,8 @@ W = angled&lt;p&gt;
 <part name="P+20" library="supply1" deviceset="VCC" device=""/>
 <part name="L2" library="rcl" deviceset="L-EU" device="L1812" value="10uH"/>
 <part name="P+21" library="supply1" deviceset="VCC" device=""/>
+<part name="D10" library="laforge" deviceset="0603ESDA-TR" device=""/>
+<part name="GND15" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14290,10 +14331,7 @@ vogelchr@vogel.cx
 <instance part="CN1" gate="G$1" x="12.7" y="243.84"/>
 <instance part="R30" gate="G$1" x="68.58" y="241.3" rot="R180"/>
 <instance part="R31" gate="G$1" x="68.58" y="233.68" rot="R180"/>
-<instance part="R32" gate="G$1" x="66.04" y="248.92" rot="R180"/>
-<instance part="R33" gate="G$1" x="81.28" y="243.84" rot="R180"/>
 <instance part="GND14" gate="1" x="27.94" y="228.6"/>
-<instance part="GND15" gate="1" x="91.44" y="243.84" rot="R90"/>
 <instance part="R34" gate="G$1" x="129.54" y="208.28" rot="R270"/>
 <instance part="U2" gate="G$1" x="327.66" y="238.76"/>
 <instance part="X2" gate="G1" x="284.48" y="251.46"/>
@@ -14490,6 +14528,8 @@ vogelchr@vogel.cx
 <instance part="P+20" gate="VCC" x="170.18" y="73.66"/>
 <instance part="L2" gate="G$1" x="185.42" y="73.66"/>
 <instance part="P+21" gate="VCC" x="185.42" y="83.82"/>
+<instance part="D10" gate="G$1" x="297.18" y="256.54"/>
+<instance part="GND15" gate="1" x="304.8" y="261.62" rot="R90"/>
 </instances>
 <busses>
 <bus name="AD8:AD[0..7]">
@@ -14572,11 +14612,6 @@ vogelchr@vogel.cx
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="68.58" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="149.86" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND15" gate="1" pin="GND"/>
-<pinref part="R33" gate="G$1" pin="1"/>
-<wire x1="88.9" y1="243.84" x2="86.36" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="GND"/>
@@ -14994,6 +15029,12 @@ vogelchr@vogel.cx
 <pinref part="U7" gate="G$1" pin="GND"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="355.6" y1="55.88" x2="355.6" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D10" gate="G$1" pin="K"/>
+<wire x1="297.18" y1="259.08" x2="297.18" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="261.62" x2="302.26" y2="261.62" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="LINE_PIN1" class="0">
@@ -15466,18 +15507,6 @@ vogelchr@vogel.cx
 <wire x1="53.34" y1="241.3" x2="63.5" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="USB_VBUS_SENS" class="0">
-<segment>
-<pinref part="R32" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="248.92" x2="73.66" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="R33" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="248.92" x2="86.36" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="243.84" x2="73.66" y2="243.84" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="243.84" x2="73.66" y2="248.92" width="0.1524" layer="91"/>
-<junction x="73.66" y="248.92"/>
-<label x="76.2" y="249.174" size="1.27" layer="95"/>
-</segment>
-</net>
 <net name="USB_DDP" class="0">
 <segment>
 <pinref part="R30" gate="G$1" pin="1"/>
@@ -15515,7 +15544,11 @@ vogelchr@vogel.cx
 <segment>
 <pinref part="X2" gate="G1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="RF_IN"/>
-<wire x1="287.02" y1="251.46" x2="309.88" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="251.46" x2="297.18" y2="251.46" width="0.1524" layer="91"/>
+<pinref part="D10" gate="G$1" pin="A"/>
+<wire x1="297.18" y1="251.46" x2="309.88" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="254" x2="297.18" y2="251.46" width="0.1524" layer="91"/>
+<junction x="297.18" y="251.46"/>
 </segment>
 </net>
 <net name="OPAMP1_OUT" class="0">
@@ -15963,17 +15996,12 @@ vogelchr@vogel.cx
 </net>
 <net name="VBUS_CONN" class="0">
 <segment>
-<pinref part="R32" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="248.92" x2="58.42" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="248.92" x2="25.4" y2="256.54" width="0.1524" layer="91"/>
 <pinref part="CN1" gate="G$1" pin="VBUS"/>
 <wire x1="22.86" y1="248.92" x2="25.4" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="63.5" y1="256.54" x2="58.42" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="256.54" x2="43.18" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="256.54" x2="43.18" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="256.54" x2="25.4" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="248.92" x2="58.42" y2="256.54" width="0.1524" layer="91"/>
-<junction x="58.42" y="256.54"/>
 <pinref part="U5" gate="G$1" pin="VCC"/>
 <wire x1="43.18" y1="254" x2="43.18" y2="256.54" width="0.1524" layer="91"/>
 <junction x="43.18" y="256.54"/>

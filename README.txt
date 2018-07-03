@@ -8,17 +8,6 @@ OPEN:
 * Repository / File Formats
 	- rename .brd/.sch to sensible name, integrate in old
 	   http://cgit.osmocom.org/osmo-e1-xcvr/ repository.
-* Board
-
-	- USB_VBUS_SENS not routed to microcontroller!
-	 - GPS antenna input has no transient voltage suppressor, possible ESD
-	damage (unless the
-	GNS module has one inside? Did you find any documentation on that in
-	the module data sheet? Recommended: 0603ESDA-TR
-	  => will check
-
-
-
 
 DONE after 20180624:
 	- EAGLE 7 compatibility
@@ -62,6 +51,10 @@ DONE after 20180625:
 	 - UART has no pull-up resistor on RxD input, i.e. floating input unless
 	UART is connected
 	- add pullup on LIU #RST
+	 - GPS antenna input has no transient voltage suppressor, possible ESD
+	damage (unless the
+	GNS module has one inside? Did you find any documentation on that in
+	the module data sheet? Recommended: 0603ESDA-TR
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
@@ -82,3 +75,6 @@ REFUSED:
 	 - If inverted-logic signals would use !SIGNAL instead of #SIGNAL, EAGLE
 	would over-stroke their names
 	  => (vogelchr) Nice, didn't know this, but will probably not change.
+
+	- USB_VBUS_SENS not routed to microcontroller!
+	  device is bus powered, hence monitoring not needed!
