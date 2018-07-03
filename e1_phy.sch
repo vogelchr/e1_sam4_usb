@@ -14150,7 +14150,6 @@ W = angled&lt;p&gt;
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
-<part name="SUPPLY9" library="supply2" deviceset="+UB" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
@@ -14167,7 +14166,6 @@ W = angled&lt;p&gt;
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY10" library="supply2" deviceset="+UB" device=""/>
 <part name="C29" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
@@ -14204,6 +14202,8 @@ W = angled&lt;p&gt;
 <part name="P+18" library="supply1" deviceset="VCC" device=""/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="P+20" library="supply1" deviceset="VCC" device=""/>
+<part name="L2" library="rcl" deviceset="L-EU" device="L1812" value="10uH"/>
+<part name="P+21" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14413,7 +14413,6 @@ vogelchr@vogel.cx
 <instance part="GND3" gate="1" x="256.54" y="22.86"/>
 <instance part="P+1" gate="VCC" x="256.54" y="73.66"/>
 <instance part="P+2" gate="VCC" x="195.58" y="73.66"/>
-<instance part="SUPPLY9" gate="G$1" x="187.96" y="73.66"/>
 <instance part="GND5" gate="1" x="233.68" y="83.82" smashed="yes" rot="R180">
 <attribute name="VALUE" x="233.68" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -14439,7 +14438,6 @@ vogelchr@vogel.cx
 <instance part="GND4" gate="1" x="256.54" y="99.06" smashed="yes">
 <attribute name="VALUE" x="254" y="96.52" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="G$1" x="271.78" y="121.92"/>
 <instance part="C29" gate="G$1" x="271.78" y="111.76" rot="MR0"/>
 <instance part="P+6" gate="VCC" x="327.66" y="111.76" rot="R270"/>
 <instance part="R12" gate="G$1" x="127" y="116.84" rot="R180"/>
@@ -14490,6 +14488,8 @@ vogelchr@vogel.cx
 <instance part="P+18" gate="VCC" x="342.9" y="88.9"/>
 <instance part="R11" gate="G$1" x="170.18" y="63.5" rot="R90"/>
 <instance part="P+20" gate="VCC" x="170.18" y="73.66"/>
+<instance part="L2" gate="G$1" x="185.42" y="73.66"/>
+<instance part="P+21" gate="VCC" x="185.42" y="83.82"/>
 </instances>
 <busses>
 <bus name="AD8:AD[0..7]">
@@ -15347,6 +15347,11 @@ vogelchr@vogel.cx
 <wire x1="170.18" y1="68.58" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="P+20" gate="VCC" pin="VCC"/>
 </segment>
+<segment>
+<pinref part="P+21" gate="VCC" pin="VCC"/>
+<pinref part="L2" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="81.28" x2="185.42" y2="78.74" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="CLK2048" class="0">
 <segment>
@@ -15660,17 +15665,6 @@ vogelchr@vogel.cx
 <wire x1="360.68" y1="114.3" x2="363.22" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="G$1" pin="+UB"/>
 <wire x1="363.22" y1="116.84" x2="363.22" y2="114.3" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="VDDA"/>
-<wire x1="198.12" y1="66.04" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="SUPPLY9" gate="G$1" pin="+UB"/>
-<wire x1="187.96" y1="66.04" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C29" gate="G$1" pin="1"/>
-<pinref part="SUPPLY10" gate="G$1" pin="+UB"/>
-<wire x1="271.78" y1="114.3" x2="271.78" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+UB_HALF" class="0">
@@ -16707,6 +16701,23 @@ vogelchr@vogel.cx
 <pinref part="U7" gate="G$1" pin="1A"/>
 <wire x1="342.9" y1="63.5" x2="345.44" y2="63.5" width="0.1524" layer="91"/>
 <label x="312.42" y="55.88" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="LIU_VDDA" class="0">
+<segment>
+<pinref part="C29" gate="G$1" pin="1"/>
+<wire x1="271.78" y1="114.3" x2="271.78" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="116.84" x2="281.94" y2="116.84" width="0.1524" layer="91"/>
+<label x="272.034" y="117.348" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VDDA"/>
+<wire x1="198.12" y1="66.04" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="L2" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="68.58" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="66.04" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<junction x="185.42" y="66.04"/>
+<label x="175.768" y="66.294" size="1.27" layer="95"/>
 </segment>
 </net>
 </nets>
