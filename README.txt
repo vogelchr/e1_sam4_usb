@@ -9,6 +9,13 @@ OPEN:
 	- rename .brd/.sch to sensible name, integrate in old
 	   http://cgit.osmocom.org/osmo-e1-xcvr/ repository.
 
+* Board
+	- edge SMA will not fit in housing with frontpanel, replace with
+	  through hole
+	- include series resistors in GPS Tx/Rx/PPS
+	- probably also on oscillator outputs, just for good measure
+	- probably also on clk to LIU
+
 DONE after 20180624:
 	- EAGLE 7 compatibility
 		(exported _v7 files)
