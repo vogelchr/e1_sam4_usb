@@ -17194,6 +17194,156 @@ distributor RS 193-9117</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="maxim" urn="urn:adsk.eagle:library:269">
+<description>&lt;b&gt;Maxim Components&lt;/b&gt;&lt;p&gt;
+
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SO08" urn="urn:adsk.eagle:footprint:17116/1" library_version="1">
+<description>&lt;b&gt;Small Outline Package&lt;/b&gt; SOIC 150 mil</description>
+<wire x1="2.159" y1="1.9558" x2="-2.159" y2="1.9558" width="0.1524" layer="21"/>
+<wire x1="2.159" y1="-1.9558" x2="2.54" y2="-1.5748" width="0.1524" layer="21" curve="90"/>
+<wire x1="-2.54" y1="1.5748" x2="-2.159" y2="1.9558" width="0.1524" layer="21" curve="-90"/>
+<wire x1="2.159" y1="1.9558" x2="2.54" y2="1.5748" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.54" y1="-1.5748" x2="-2.159" y2="-1.9558" width="0.1524" layer="21" curve="90"/>
+<wire x1="-2.159" y1="-1.9558" x2="2.159" y2="-1.9558" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-1.5748" x2="2.54" y2="1.5748" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="1.5748" x2="-2.54" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-1.5748" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-2.54" y1="-1.6002" x2="2.54" y2="-1.6002" width="0.0508" layer="21"/>
+<smd name="1" x="-1.905" y="-3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="8" x="-1.905" y="3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="2" x="-0.635" y="-3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="3" x="0.635" y="-3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="7" x="-0.635" y="3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="6" x="0.635" y="3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="4" x="1.905" y="-3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<smd name="5" x="1.905" y="3.0734" dx="0.6604" dy="2.032" layer="1"/>
+<text x="3.937" y="-2.032" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-2.921" y="-1.905" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<rectangle x1="1.651" y1="1.9558" x2="2.159" y2="3.0988" layer="51"/>
+<rectangle x1="-2.159" y1="-3.0988" x2="-1.651" y2="-1.9558" layer="51"/>
+<rectangle x1="-0.889" y1="-3.0988" x2="-0.381" y2="-1.9558" layer="51"/>
+<rectangle x1="0.381" y1="-3.0734" x2="0.889" y2="-1.9304" layer="51"/>
+<rectangle x1="1.651" y1="-3.0988" x2="2.159" y2="-1.9558" layer="51"/>
+<rectangle x1="0.381" y1="1.9558" x2="0.889" y2="3.0988" layer="51"/>
+<rectangle x1="-0.889" y1="1.9558" x2="-0.381" y2="3.0988" layer="51"/>
+<rectangle x1="-2.159" y1="1.9558" x2="-1.651" y2="3.0988" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="SO08" urn="urn:adsk.eagle:package:17511/1" type="box" library_version="1">
+<description>Small Outline Package SOIC 150 mil</description>
+<packageinstances>
+<packageinstance name="SO08"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="MAX6173" urn="urn:adsk.eagle:symbol:17457/1" library_version="1">
+<wire x1="-5.08" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-6.35" y2="0" width="0.1524" layer="94"/>
+<text x="-5.08" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="IN" x="-7.62" y="5.08" length="short" direction="in"/>
+<pin name="GND" x="-7.62" y="-5.08" length="short" direction="pwr"/>
+<pin name="OUT" x="10.16" y="2.54" length="short" direction="in" rot="R180"/>
+<pin name="TRIM" x="10.16" y="-2.54" length="short" direction="in" rot="R180"/>
+<pin name="TEMP" x="-5.08" y="0" length="point" direction="nc"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MAX617*ASA" urn="urn:adsk.eagle:component:17777/1" prefix="IC" library_version="1">
+<description>&lt;b&gt;High-Precision Voltage References with Temperature Sensor&lt;/b&gt;&lt;p&gt;
+Source: http://datasheets.maxim-ic.com/en/ds/MAX6173-MAX6177.pdf</description>
+<gates>
+<gate name="G$1" symbol="MAX6173" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SO08">
+<connects>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="IN" pad="2"/>
+<connect gate="G$1" pin="OUT" pad="6"/>
+<connect gate="G$1" pin="TEMP" pad="3"/>
+<connect gate="G$1" pin="TRIM" pad="5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17511/1"/>
+</package3dinstances>
+<technologies>
+<technology name="3A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6173AASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0602" constant="no"/>
+</technology>
+<technology name="3B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6173BASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0604" constant="no"/>
+</technology>
+<technology name="4A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6174AASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0606" constant="no"/>
+</technology>
+<technology name="4B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6174BASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0608" constant="no"/>
+</technology>
+<technology name="5A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6175AASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="1800780" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0610" constant="no"/>
+</technology>
+<technology name="5B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6175BASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0612" constant="no"/>
+</technology>
+<technology name="6A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6176AASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0614" constant="no"/>
+</technology>
+<technology name="6B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6176BASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0616" constant="no"/>
+</technology>
+<technology name="7A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6177AASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0618" constant="no"/>
+</technology>
+<technology name="7B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="MAX6177BASA+" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="61K0620" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17317,7 +17467,6 @@ distributor RS 193-9117</description>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+UB" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
-<part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100n"/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SV5" library="con-lstb" deviceset="MA05-1" device=""/>
@@ -17407,6 +17556,12 @@ distributor RS 193-9117</description>
 <part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="33R"/>
 <part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="33R"/>
 <part name="X1" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-G" device="" package3d_urn="urn:adsk.eagle:package:6205/1"/>
+<part name="IC4" library="maxim" library_urn="urn:adsk.eagle:library:269" deviceset="MAX617*ASA" device="" package3d_urn="urn:adsk.eagle:package:17511/1" technology="3A"/>
+<part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="0R (DNP)"/>
+<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+UB" device=""/>
+<part name="C30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100n"/>
+<part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="BLM/0R"/>
 </parts>
 <sheets>
 <sheet>
@@ -17465,6 +17620,7 @@ vogelchr@vogel.cx
 <text x="312.42" y="104.14" size="1.27" layer="97">UEXT
 4="TxD"=#CS2</text>
 <text x="15.24" y="200.66" size="1.778" layer="97">Power LEDs</text>
+<text x="208.28" y="134.62" size="1.27" layer="97">use MAX6163</text>
 </plain>
 <instances>
 <instance part="R3" gate="G$1" x="33.02" y="5.08" rot="R180"/>
@@ -17583,7 +17739,6 @@ vogelchr@vogel.cx
 <instance part="SUPPLY7" gate="G$1" x="205.74" y="218.44"/>
 <instance part="GND34" gate="1" x="205.74" y="193.04"/>
 <instance part="R15" gate="G$1" x="236.22" y="182.88"/>
-<instance part="GND35" gate="1" x="243.84" y="187.96"/>
 <instance part="C28" gate="G$1" x="358.14" y="152.4" rot="MR90"/>
 <instance part="GND36" gate="1" x="363.22" y="147.32"/>
 <instance part="SV5" gate="G$1" x="340.36" y="109.22"/>
@@ -17699,6 +17854,12 @@ vogelchr@vogel.cx
 <instance part="R21" gate="G$1" x="363.22" y="236.22" rot="R180"/>
 <instance part="R22" gate="G$1" x="353.06" y="218.44"/>
 <instance part="X1" gate="G1" x="284.48" y="251.46"/>
+<instance part="IC4" gate="G$1" x="220.98" y="147.32" rot="MR0"/>
+<instance part="R23" gate="G$1" x="218.44" y="162.56"/>
+<instance part="GND16" gate="1" x="231.14" y="134.62"/>
+<instance part="SUPPLY9" gate="G$1" x="226.06" y="167.64"/>
+<instance part="C30" gate="G$1" x="236.22" y="144.78" rot="R180"/>
+<instance part="R24" gate="G$1" x="243.84" y="152.4" rot="R180"/>
 </instances>
 <busses>
 <bus name="AD8:AD[0..7]">
@@ -17982,11 +18143,6 @@ vogelchr@vogel.cx
 <junction x="205.74" y="200.66"/>
 </segment>
 <segment>
-<wire x1="241.3" y1="193.04" x2="243.84" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="193.04" x2="243.84" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="GND35" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C28" gate="G$1" pin="1"/>
 <wire x1="360.68" y1="152.4" x2="363.22" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="GND36" gate="1" pin="GND"/>
@@ -18204,6 +18360,17 @@ vogelchr@vogel.cx
 <wire x1="297.18" y1="259.08" x2="297.18" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="261.62" x2="302.26" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="G$1" pin="GND"/>
+<wire x1="228.6" y1="142.24" x2="231.14" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="231.14" y1="142.24" x2="231.14" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="139.7" x2="231.14" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="139.7" x2="236.22" y2="139.7" width="0.1524" layer="91"/>
+<junction x="231.14" y="139.7"/>
+<pinref part="C30" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="139.7" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LINE_PIN1" class="0">
@@ -18660,6 +18827,11 @@ vogelchr@vogel.cx
 <junction x="91.44" y="256.54"/>
 <label x="73.66" y="256.54" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="248.92" y1="152.4" x2="261.62" y2="152.4" width="0.1524" layer="91"/>
+<label x="249.682" y="152.654" size="1.27" layer="95"/>
+</segment>
 </net>
 <net name="USB_DDM_CON" class="0">
 <segment>
@@ -18856,19 +19028,20 @@ vogelchr@vogel.cx
 <wire x1="205.74" y1="215.9" x2="205.74" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="U6" gate="G$1" pin="VDD"/>
 <wire x1="205.74" y1="213.36" x2="205.74" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="213.36" x2="215.9" y2="213.36" width="0.1524" layer="91"/>
 <junction x="205.74" y="213.36"/>
-<pinref part="U6" gate="G$1" pin="REF"/>
-<wire x1="215.9" y1="213.36" x2="205.74" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="210.82" x2="215.9" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="210.82" x2="215.9" y2="213.36" width="0.1524" layer="91"/>
-<junction x="215.9" y="213.36"/>
+<wire x1="218.44" y1="213.36" x2="205.74" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SV5" gate="G$1" pin="5"/>
 <wire x1="347.98" y1="114.3" x2="350.52" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="G$1" pin="+UB"/>
 <wire x1="350.52" y1="116.84" x2="350.52" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="+UB"/>
+<wire x1="226.06" y1="165.1" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="162.56" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+UB_HALF" class="0">
@@ -19978,6 +20151,31 @@ vogelchr@vogel.cx
 <wire x1="360.68" y1="226.06" x2="360.68" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="2"/>
 <wire x1="360.68" y1="218.44" x2="358.14" y2="218.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="IC4" gate="G$1" pin="OUT"/>
+<wire x1="210.82" y1="149.86" x2="208.28" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="149.86" x2="208.28" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="162.56" x2="210.82" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="U6" gate="G$1" pin="REF"/>
+<wire x1="210.82" y1="162.56" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="210.82" x2="210.82" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="210.82" x2="210.82" y2="162.56" width="0.1524" layer="91"/>
+<junction x="210.82" y="162.56"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="IC4" gate="G$1" pin="IN"/>
+<wire x1="228.6" y1="152.4" x2="236.22" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="C30" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="152.4" x2="236.22" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="152.4" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
+<junction x="236.22" y="152.4"/>
 </segment>
 </net>
 </nets>

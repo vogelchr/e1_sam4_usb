@@ -56,10 +56,13 @@ DONE after 20180625:
 	GNS module has one inside? Did you find any documentation on that in
 	the module data sheet? Recommended: 0603ESDA-TR
 
-	(this was refused earlier, but later on implemented:)
 	 - GPS receiver rx/tx/pps doen't have series termination (27R or
 	the like), possibly resulting in switching tranients degrading GPS
 	performance
+
+	(this was refused earlier, but later on implemented:)
+	 - might make sense to add a precision voltage reference for the DAC,
+	e.g. MAX6163ESA?
 
 	- 33R series resistance in oscillator outputs
 
@@ -69,11 +72,6 @@ DONE after 20180625:
 
 REFUSED:
 	- interface to old LIU only board (SPI + DATA on pinheader)
-	 - might make sense to add a precision voltage reference for the DAC,
-	e.g. MAX6163ESA?
-		regulation seems to be good enough with the crappy DAC
-		in the SAM4S, so I think having the "good" +UB supply that
-		has constant load will be sufficient
 
 	 - 1k series resistors for LEDs seems quite high resistance for 3.3V. I
 	would usually expect 330..680 Ohms there?
