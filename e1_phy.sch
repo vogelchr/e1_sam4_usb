@@ -17562,6 +17562,10 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX6173-MAX6177.pdf</description>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+UB" device=""/>
 <part name="C30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100n"/>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="BLM/0R"/>
+<part name="TP1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
+<part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
+<part name="R29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
+<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -17773,8 +17777,8 @@ vogelchr@vogel.cx
 <instance part="P+3" gate="VCC" x="236.22" y="83.82" smashed="yes">
 <attribute name="VALUE" x="236.22" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND7" gate="1" x="266.7" y="58.42" smashed="yes" rot="R90">
-<attribute name="VALUE" x="269.24" y="55.88" size="1.778" layer="96" rot="R90"/>
+<instance part="GND7" gate="1" x="284.48" y="50.8" smashed="yes">
+<attribute name="VALUE" x="281.94" y="48.26" size="1.778" layer="96"/>
 </instance>
 <instance part="GND8" gate="1" x="238.76" y="10.16"/>
 <instance part="GND9" gate="1" x="175.26" y="25.4"/>
@@ -17860,6 +17864,10 @@ vogelchr@vogel.cx
 <instance part="SUPPLY9" gate="G$1" x="226.06" y="167.64"/>
 <instance part="C30" gate="G$1" x="236.22" y="144.78" rot="R180"/>
 <instance part="R24" gate="G$1" x="243.84" y="152.4" rot="R180"/>
+<instance part="TP1" gate="G$1" x="269.24" y="63.5"/>
+<instance part="TP2" gate="G$1" x="271.78" y="48.26" rot="R270"/>
+<instance part="R29" gate="G$1" x="276.86" y="58.42" rot="R180"/>
+<instance part="TP3" gate="G$1" x="271.78" y="35.56" rot="R270"/>
 </instances>
 <busses>
 <bus name="AD8:AD[0..7]">
@@ -18198,11 +18206,6 @@ vogelchr@vogel.cx
 <wire x1="228.6" y1="78.74" x2="233.68" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND7" gate="1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="TDN"/>
-<wire x1="264.16" y1="58.42" x2="254" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U1" gate="G$1" pin="JA1"/>
 <wire x1="236.22" y1="17.78" x2="236.22" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="15.24" x2="238.76" y2="15.24" width="0.1524" layer="91"/>
@@ -18371,6 +18374,12 @@ vogelchr@vogel.cx
 <junction x="231.14" y="139.7"/>
 <pinref part="C30" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="139.7" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R29" gate="G$1" pin="1"/>
+<wire x1="281.94" y1="58.42" x2="284.48" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="284.48" y1="58.42" x2="284.48" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LINE_PIN1" class="0">
@@ -20176,6 +20185,31 @@ vogelchr@vogel.cx
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="152.4" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
 <junction x="236.22" y="152.4"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="CV_RDN"/>
+<pinref part="TP2" gate="G$1" pin="TP"/>
+<wire x1="254" y1="48.26" x2="269.24" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="TDN"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="254" y1="58.42" x2="269.24" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="TP1" gate="G$1" pin="TP"/>
+<wire x1="269.24" y1="58.42" x2="271.78" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="60.96" x2="269.24" y2="58.42" width="0.1524" layer="91"/>
+<junction x="269.24" y="58.42"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="LOS"/>
+<pinref part="TP3" gate="G$1" pin="TP"/>
+<wire x1="254" y1="35.56" x2="269.24" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
