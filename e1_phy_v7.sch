@@ -14327,6 +14327,9 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX6173-MAX6177.pdf</description>
 <part name="TP2" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="TP3" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="TP4" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="TP5" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="TP6" library="testpad" deviceset="TP" device="B1,27"/>
 </parts>
 <sheets>
 <sheet>
@@ -14629,6 +14632,9 @@ vogelchr@vogel.cx
 <instance part="TP2" gate="G$1" x="271.78" y="48.26" rot="R270"/>
 <instance part="R29" gate="G$1" x="276.86" y="58.42" rot="R180"/>
 <instance part="TP3" gate="G$1" x="271.78" y="35.56" rot="R270"/>
+<instance part="TP4" gate="G$1" x="276.86" y="45.72"/>
+<instance part="TP5" gate="G$1" x="269.24" y="55.88" rot="R270"/>
+<instance part="TP6" gate="G$1" x="208.28" y="167.64"/>
 </instances>
 <busses>
 <bus name="AD8:AD[0..7]">
@@ -15509,8 +15515,12 @@ vogelchr@vogel.cx
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="MCLK"/>
-<wire x1="254" y1="40.64" x2="266.7" y2="40.64" width="0.1524" layer="91"/>
-<label x="254.254" y="40.894" size="1.27" layer="95"/>
+<label x="277.114" y="40.894" size="1.27" layer="95"/>
+<wire x1="254" y1="40.64" x2="276.86" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="TP4" gate="G$1" pin="TP"/>
+<wire x1="276.86" y1="40.64" x2="284.48" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="43.18" x2="276.86" y2="40.64" width="0.1524" layer="91"/>
+<junction x="276.86" y="40.64"/>
 </segment>
 </net>
 <net name="RX_CLK" class="0">
@@ -15559,6 +15569,7 @@ vogelchr@vogel.cx
 <pinref part="U1" gate="G$1" pin="TCLK"/>
 <wire x1="254" y1="55.88" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
 <label x="254.254" y="56.134" size="1.27" layer="95"/>
+<pinref part="TP5" gate="G$1" pin="TP"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="PB3_AD7"/>
@@ -16935,6 +16946,9 @@ vogelchr@vogel.cx
 <wire x1="218.44" y1="210.82" x2="210.82" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="210.82" x2="210.82" y2="162.56" width="0.1524" layer="91"/>
 <junction x="210.82" y="162.56"/>
+<pinref part="TP6" gate="G$1" pin="TP"/>
+<wire x1="208.28" y1="165.1" x2="208.28" y2="162.56" width="0.1524" layer="91"/>
+<junction x="208.28" y="162.56"/>
 </segment>
 </net>
 <net name="N$9" class="0">
