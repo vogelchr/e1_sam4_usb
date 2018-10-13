@@ -5,6 +5,29 @@ commit af33165416c78bff5535539db3183336a3adedb6
 
 OPEN:
 
+* Board Bringup
+	- due to PLL restrictions we cannot generate PCK 2.048 MHz, have
+	  to live with SSC clk output (-> remove sam4s Pin 6,
+	     PB3 to TX_CLK, PA21 to CLK2048)
+	  
+	- LIU spi interface configuration, pull SCLKE up (now: gnd)
+	    SCLKE=low: shift SDO on rising edge of SCLK  (datasheet page 13)
+	    SCLKE=high: shift SDO on falling edge of SCLK
+	  SDI is *always* sampled on the rising edge, so to be consistent
+	  SDI will be shifted on the falling edge, so should SDO and SCLKE
+	  should be HIGH
+
+	- rename LEDs to match net numbers (LED1..LED3)
+
+* New Features
+
+	For generating the E1 frame sync signal to the SSC peripheral:
+	- bridge PA20/Pin16/RF (Receive Frame) to
+	         PA27/Pin37/TIOB2 (Timer 2, IO B)
+	         
+	- bridge PA29/Pin41/TCLK2 (ext. clock input 2 to timer) to
+	         PA19/Pin13/RK (Receive Clock)
+
 * Repository / File Formats
 	- rename .brd/.sch to sensible name, integrate in old
 	   http://cgit.osmocom.org/osmo-e1-xcvr/ repository.
